@@ -52,7 +52,7 @@ dataPVC:
   size: 2Gi
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
 
 resources:
   limits:
@@ -64,7 +64,7 @@ resources:
 
 security:
   # serviceAccountName is the name of the service account to use
-  serviceAccountName: "default"
+  serviceAccountName: mqsa
   # context section specifies additional security context settings for the pod
   context:
     fsGroup:
